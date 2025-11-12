@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Akzid Gro Pro";
+  src: url(/fonts/AkzidGroPro.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: 'Onest Variable';
+  src: url('/fonts/Onest-VariableFont.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Oswald Variable';
+  src: url('/fonts/Oswald-VariableFont_wght.ttf') format('truetype');
+}
+
+body {
+  overflow: hidden;
+  font-family: 'Onest Variable', sans-serif;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.2s ease backwards;
+}
+
+.slide-down {
+  animation: slideDown 0.2s ease forwards;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.2s ease-in;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}

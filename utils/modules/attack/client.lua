@@ -1,0 +1,11 @@
+AddEventHandler('onPlayerJoining', function()
+	local player = PlayerPedId()
+	SetCanAttackFriendly(player, true, true)
+	NetworkSetFriendlyFireOption(true)
+end)
+
+CreateThread(function()
+	local player = PlayerPedId()
+	SetCanAttackFriendly(player, true, true)
+	NetworkSetFriendlyFireOption(true)
+end)
